@@ -1,0 +1,4 @@
+%include "vm.inc"
+
+_mov r4, 3
+_mov r7, 8
