@@ -8,7 +8,7 @@
 
 struct CPU
 {
-    u_int32_t registers[6];  // 7 general purpose registers
+    u_int32_t registers[8];  // 7 general purpose registers
     u_int32_t stack[0x4000]; // 8 kB
     u_char bytecode[0x1000]; // 4 kB
     uint IP;

@@ -122,7 +122,7 @@ void InfoStack(struct CPU* cpu, uint max_memory)
 {
     puts("stack info:");
     
-    for(uint i=0; i <= max_memory; i++)
+    for(uint i=0; i < max_memory; i++)
     {
         printf("[%d]", cpu->stack[i]);
     }

@@ -46,22 +46,16 @@ void Div(struct CPU* cpu)
 
 void Push(struct CPU* cpu)
 {
-    SetSP(&cpu);
-    // cpu->stack[cpu->SP] = cpu->bytecode[cpu->IP];
     cpu->stack[cpu->SP] = cpu->bytecode[cpu->IP];
     cpu->IP++;
+    cpu->SP++;
 }
 
 void Pop(struct CPU* cpu)
 {
-    SetSP(&cpu);
-    uint counter = cpu->bytecode[cpu->IP];
-    for(uint i=0; i <= counter; i++)
-    {
-        cpu->stack[cpu->SP--] = 0;
-    }
-    FIRST_PARAM = cpu->stack[cpu->SP--];
+    FIRST_PARAM = cpu->stack[cpu->SP-1];
     cpu->IP++;
+    cpu->SP--;
 }
 
 void Ptb(struct CPU* cpu)
@@ -74,16 +68,4 @@ void Xor(struct CPU* cpu)
 {
     FIRST_PARAM ^= SECOND_PARAM;
     cpu->IP+=2;
-}
-
-void SetSP(struct CPU** cpu)
-{
-    for(uint i=0; i <= sizeof((*cpu)->stack); i++)
-    {
-        if((*cpu)->stack[i] == 0)
-        {
-            (*cpu)->SP = i;
-            break;
-        }
-    }
 }
