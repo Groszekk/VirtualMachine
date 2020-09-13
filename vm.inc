@@ -52,3 +52,8 @@ db 0x99, %1
 %macro _xor 2
 db 0x9a, %1, %2
 %endmacro
+
+%macro _call 1
+db 0x9b
+dw %1
+%endmacro

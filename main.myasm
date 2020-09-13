@@ -1,5 +1,8 @@
 %include "vm.inc"
 
-_push 0xf
-_mov r7, 8
-_pop r3
+_call label
+
+_mov r3, 0xa
+
+label:
+_mov r0, 0xf

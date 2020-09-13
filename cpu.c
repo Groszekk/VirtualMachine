@@ -104,6 +104,12 @@ void Execute(struct CPU* cpu)
                 Xor(_cpu);
                 break;
             }
+
+            case 0x9b:
+            {
+                Call(_cpu);
+                break;
+            }
         }
     }
 }

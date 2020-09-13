@@ -17,6 +17,7 @@ void Push(struct CPU* cpu);
 void Pop(struct CPU* cpu);
 void Ptb(struct CPU* cpu);
 void Xor(struct CPU* cpu);
+void Call(struct CPU* cpu);
 
 // other functions for cleanup code
 void SetSP(struct CPU** cpu);

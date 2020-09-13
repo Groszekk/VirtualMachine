@@ -5,6 +5,7 @@ void Mov(struct CPU* cpu)
     //cpu->registers[cpu->bytecode[cpu->IP]] = cpu->bytecode[cpu->IP+1];
     FIRST_PARAM = SECOND_PARAM;
     printf("mov r%d, %d\n", cpu->bytecode[cpu->IP], cpu->bytecode[cpu->IP+1]);
+    printf("IP -> %d\n", cpu->IP);
     cpu->IP+=2;
 }
 
@@ -68,4 +69,12 @@ void Xor(struct CPU* cpu)
 {
     FIRST_PARAM ^= SECOND_PARAM;
     cpu->IP+=2;
+}
+
+void Call(struct CPU* cpu)
+{
+    cpu->stack[cpu->SP] = cpu->bytecode[cpu->IP]; // stack[SP] = IP position
+    cpu->IP = (cpu->bytecode[cpu->IP])-1; // change IP to calling label
+    cpu->SP++;
+    cpu->IP++;
 }
