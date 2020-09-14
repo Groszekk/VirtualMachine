@@ -110,6 +110,18 @@ void Execute(struct CPU* cpu)
                 Call(_cpu);
                 break;
             }
+
+            case 0x9c:
+            {
+                Ret(_cpu);
+                break;
+            }
+            
+            case 0x9d:
+            {
+                Exit(_cpu);
+                break;
+            }
         }
     }
 }

@@ -57,3 +57,11 @@ db 0x9a, %1, %2
 db 0x9b
 dw %1
 %endmacro
+
+%macro _ret 0
+db 0x9c
+%endmacro
+
+%macro _exit 0
+db 0x9d
+%endmacro

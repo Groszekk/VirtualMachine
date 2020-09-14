@@ -1,8 +1,10 @@
 %include "vm.inc"
 
-_call label
+_call test_label
 
 _mov r3, 0xa
+_exit
 
-label:
+test_label:
 _mov r0, 0xf
+_ret
