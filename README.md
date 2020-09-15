@@ -2,7 +2,7 @@
 
 ## Simple virtual architecture[...]
 
-# Specyfication
+# Specification
 
 ## Memory
 - 8kB stack
