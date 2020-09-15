@@ -1,7 +1,5 @@
 # Virtual Machine
 
-## Simple virtual architecture[...]
-
 # Specification
 
 ## Memory
