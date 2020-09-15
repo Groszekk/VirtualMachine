@@ -14,4 +14,4 @@
 - _mov **reg**, **imm32** | (**req** -> **imm32**)
 - _sub **reg**, **imm32** | (**req** += **imm32**)
 - _add **reg**, **imm32** | (**req** -= **imm32**)
-- _dec **req**            | (**req** -= 1)
+- _dec **reg**            | (**req** -= 1)
