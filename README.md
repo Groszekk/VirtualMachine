@@ -11,5 +11,5 @@
 - IP (Instruction Pointer)
 - SP (Stack Pointer)
 ## Instructions
-- _mov **reg**, **imm32** (**req** -> **imm32**)
-- _sub **reg**, **imm32** (**req** += **imm32**)
+- _mov **reg**, **imm32** | (**req** -> **imm32**)
+- _sub **reg**, **imm32** | (**req** += **imm32**)
